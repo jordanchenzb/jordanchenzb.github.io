@@ -27,7 +27,7 @@
 <meta property="og:description" content="Generating diffusion MRI scalar maps from T1 weighted images using GAN">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-09-25T14:22:00.000Z">
-<meta property="article:modified_time" content="2022-09-25T15:23:54.903Z">
+<meta property="article:modified_time" content="2022-09-25T23:57:28.736Z">
 <meta property="article:author" content="J0RDAN Chen">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
@@ -324,7 +324,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">151</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">200</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -490,9 +490,12 @@
 <p>It trained CycleGAN to learn to map T1 image to FA&#x2F;MD.</p>
 <p>It shows that synthetic FA images can be used as a target for non-linear registration, to correct for geometric distortions common in diffusion MRI.</p>
 </blockquote>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Two major &#x3D;&#x3D;bottlenecks&#x3D;&#x3D; in getting diffusion-derived scalar maps: expensive cost; small error in data processing pipelines will trigger large bias.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Two major <strong>bottlenecks</strong> in getting diffusion-derived scalar maps: expensive cost; small error in data processing pipelines will trigger large bias.</p>
 <p>GAN had been used for medical image processing applications, including tasks like denoting, reconstruction, segmentation, etc. But few works have apply GAN on cross-modal medical image translation on MR images</p>
-<p>This paper proposed to translate T1 image to diffusion-derived scalar maps using CycleGAN. It’s the first GAN-based translation between &#x3D;&#x3D;structural space&#x3D;&#x3D; and &#x3D;&#x3D;diffusion space&#x3D;&#x3D;</p>
+<p>This paper proposed to translate T1 image to diffusion-derived scalar maps using CycleGAN. It’s the first GAN-based translation between <strong>structural space</strong> and <strong>diffusion space</strong></p>
+<h2 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h2><h3 id="Diffusion-tensor-model"><a href="#Diffusion-tensor-model" class="headerlink" title="Diffusion tensor model"></a>Diffusion tensor model</h3><p>It is too complicated for me to understand. Maybe I should learn what diffusion model is first.</p>
+<p>To be filled…</p>
+<h3 id="CycleGAN"><a href="#CycleGAN" class="headerlink" title="CycleGAN"></a>CycleGAN</h3><p>2 generators + 2 discriminators<br>$$<br>\begin{array}{l}<br>G_{B 2 A}\left(G_{A 2 B}\left(I_A\right)\right) \approx I_A \<br>G_{A 2 B}\left(G_{B 2 A}\left(I_B\right)\right) \approx I_B<br>\end{array}<br>$$</p>
 
     </article>
     <!-- license -->
@@ -501,7 +504,7 @@
             <p>原文作者：<a href="http://jordanchenzb.github.io">J0RDAN Chen</a>
             <p>原文链接：<a href="http://jordanchenzb.github.io/2022/09/25/T1%20to%20diffusion%20MRI/">http://jordanchenzb.github.io/2022/09/25/T1%20to%20diffusion%20MRI/</a>
             <p>发表日期：<a href="http://jordanchenzb.github.io/2022/09/25/T1%20to%20diffusion%20MRI/">September 25th 2022, 10:22:00 pm</a>
-            <p>更新日期：<a href="http://jordanchenzb.github.io/2022/09/25/T1%20to%20diffusion%20MRI/">September 25th 2022, 11:23:54 pm</a>
+            <p>更新日期：<a href="http://jordanchenzb.github.io/2022/09/25/T1%20to%20diffusion%20MRI/">September 26th 2022, 7:57:28 am</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -665,7 +668,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Generating-diffusion-MRI-scalar-maps-from-T1-weighted-images-using-GAN"><span class="toc-number">1.</span> <span class="toc-text">Generating diffusion MRI scalar maps from T1 weighted images using GAN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Generating-diffusion-MRI-scalar-maps-from-T1-weighted-images-using-GAN"><span class="toc-number">1.</span> <span class="toc-text">Generating diffusion MRI scalar maps from T1 weighted images using GAN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Theory"><span class="toc-number">1.2.</span> <span class="toc-text">Theory</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Diffusion-tensor-model"><span class="toc-number">1.2.1.</span> <span class="toc-text">Diffusion tensor model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CycleGAN"><span class="toc-number">1.2.2.</span> <span class="toc-text">CycleGAN</span></a></li></ol></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
